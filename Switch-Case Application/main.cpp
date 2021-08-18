@@ -9,28 +9,27 @@ int main()
 
 	cout << "* **Calculater Application * **" << endl;
 
-	while (true)
+	
+	cout << "Please enter the num1, operation, and num2 in order: ";
+	cin >> num1 >> operation >> num2;
+		
+	switch (operation)
 	{
-		cout << "Please enter the num1, operation, and num2 in order: ";
-		cin >> num1 >> operation >> num2;
+	    case '+': cout << num1 << operation << num2 << "=" << num1 + num2 << endl; break;
+	    case '-': cout << num1 << operation << num2 << "=" << num1 - num2 << endl; break;
+	    case '*': cout << num1 << operation << num2 << "=" << num1 * num2 << endl; break;
+	    case '/': cout << num1 << operation << num2 << "=" << num1 / num2 << endl; break;
+	    case '%':
+		    ((int)num1 == num1 && (int)num2 == num2) ?
+		    cout << num1 << operation << num2 << "=" << (int)num1 % (int)num2 << endl :
+		    cout << "Not valid..." << endl;
+	            break;
 		
-		switch (operation)
-		{
-		case '+': cout << num1 << operation << num2 << "=" << num1 + num2 << endl; break;
-		case '-': cout << num1 << operation << num2 << "=" << num1 - num2 << endl; break;
-		case '*': cout << num1 << operation << num2 << "=" << num1 * num2 << endl; break;
-		case '/': cout << num1 << operation << num2 << "=" << num1 / num2 << endl; break;
-		case '%':
-			((int)num1 == num1 && (int)num2 == num2) ?
-				cout << num1 << operation << num2 << "=" << (int)num1 % (int)num2 << endl :
-				cout << "Not valid..." << endl;
-			break;
+	    default:
+		    cout << "Not valid operation!";
+		    break;
 		
-		default:
-			cout << "Not valid operation!";
-			break;
-		
-	}
+	
 
 	}
 
